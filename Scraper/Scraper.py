@@ -25,14 +25,15 @@ archive_url = archive_spider()
 def article_spider():
     opener = urllib2.build_opener()
     opener.addheaders = [('User-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36')]
-
-    archive_html = opener.open(archive_url[0]).read()
-    archive_soup = BeautifulSoup(archive_html)
-
-    article_list = archive_soup.find("div", class_="primaryContent").find("div", class_="module").find_all("a")
     article_links = []
-    for x in article_list:
-        article_links += re.compile(r"<a href=\"(.*?)\">").findall(str(x))
+    for x in range(10):
+        archive_html = opener.open(archive_url[x]).read()
+        archive_soup = BeautifulSoup(archive_html)
+
+        article_list = archive_soup.find("div", class_="primaryContent").find("div", class_="module").find_all("a")
+        for x in article_list:
+            article_links += re.compile(r"<a href=\"(.*?)\">").findall(str(x))
+    
     return article_links[::100]
 
 article_links = article_spider()
@@ -41,14 +42,18 @@ def article_parser():
     opener = urllib2.build_opener()
     opener.addheaders = [('User-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36')]
 
-    article_html = opener.open(article_links[1]).read()
-    article_soup = BeautifulSoup(article_html)
-
-    if article_soup.find("span", id="articleText").find("pre") == None:
-        text = ""
-        for string in article_soup.find("span", id="articleText").stripped_strings:
-            text += str(string)
-    else:
-        text = (article_soup.find("span", id="articleText").find("pre").string)
+    art_dic = {}
     
-    return text
+    for x in range(10):
+        article_html = opener.open(article_links[x]).read()
+        article_soup = BeautifulSoup(article_html)
+        art_dict["art_id"] = article_links[x]
+        
+        if article_soup.find("span", id="articleText").find("pre") == None:
+            art_dict["text"] = ""
+            for string in article_soup.find("span", id="articleText").stripped_strings:
+                art_dict["text"] += str(string)
+        else:
+            art_dict["text"] = (article_soup.find("span", id="articleText").find("pre").string)
+        
+    return art_dic
