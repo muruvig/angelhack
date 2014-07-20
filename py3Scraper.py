@@ -1,11 +1,11 @@
 from bs4 import BeautifulSoup
-import urllib2
+import urllib.request, urllib.error, urllib.parse
 import requests
 import re
 import sys
 
 def archive_spider():
-    opener = urllib2.build_opener()
+    opener = urllib.request.build_opener()
     opener.addheaders = [('User-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36')]
     url = "http://reuters.com/resources/archive/us/"
     html = opener.open(url).read()
@@ -23,7 +23,7 @@ def archive_spider():
 archive_url = archive_spider()
 
 def article_spider():
-    opener = urllib2.build_opener()
+    opener = urllib.request.build_opener()
     opener.addheaders = [('User-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36')]
     article_links = []
     for x in range(10):
@@ -39,13 +39,13 @@ def article_spider():
 article_links = article_spider()
 
 def article_parser():
-    opener = urllib2.build_opener()
+    opener = urllib.request.build_opener()
     opener.addheaders = [('User-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36')]
 
     art_dic = {}
     
-    for x in article_links:
-        article_html = opener.open(x).read()
+    for x in range(10):
+        article_html = opener.open(article_links[x]).read()
         article_soup = BeautifulSoup(article_html)
         art_dict["art_id"] = article_links[x]
         
