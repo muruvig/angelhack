@@ -2,8 +2,9 @@
 
 from sampledata import *
 from string import ascii_letters
+import os
 
-DATA_PATH = "C:/1/cs/projects/stockpulse/angelhack/scripts/"
+DATA_PATH = os.getcwd()+ '\\'
 
 def load_sentiments(file_name=DATA_PATH + "sentiments.csv"):
     """Read the sentiment file and return a dictionary containing the sentiment
