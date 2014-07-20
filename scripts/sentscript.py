@@ -3,7 +3,7 @@
 from sampledata import *
 from string import ascii_letters
 
-DATA_PATH = "C:/1/cs/projects/stockpulse/angelhack/scripts/"
+DATA_PATH = ""
 
 def load_sentiments(file_name=DATA_PATH + "sentiments.csv"):
     """Read the sentiment file and return a dictionary containing the sentiment
