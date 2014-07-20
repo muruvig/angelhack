@@ -4,14 +4,14 @@ from sampledata import *
 from string import ascii_letters
 import os
 
-DATA_PATH = os.getcwd()+ '\\'
+DATA_PATH = os.getcwd()+ '/'
 
 def load_sentiments(file_name=DATA_PATH + "sentiments.csv"):
     """Read the sentiment file and return a dictionary containing the sentiment
     score of each word, a value from -1 to +1.
     """
     sentiments = {}
-    for line in open(file_name, encoding='utf8'):
+    for line in open(file_name):#, encoding='utf8'):
         word, score = line.split(',')
         sentiments[word] = float(score.strip())
     return sentiments
@@ -96,6 +96,7 @@ def sentimentByDate(listOfIDs): #returns a dictionary of date:averageSentiment
         avgSent = totalSent/len(returnDict[key])
         returnDict[key] = avgSent
     return returnDict
+
 
 def searchFunction(keyword):
     keyword = keyword.lower()
