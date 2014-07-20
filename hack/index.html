@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <style>
+            
+            @font-face {
+            font-family: ClanPro-News;
+            src: url(/Elements/ClanPro-News.otf);
+            }
+            
+            #buttons {
+            border: 0; 
+            padding: 10px; 
+            font-family: ClanPro-News;
+            font-size: 18px; 
+            color: white; 
+            background-color: #1FBAD6;
+            width: 200px;
+            margin: auto;
+            
+            }
+            
+            #overlay {
+                position: relative;
+                width:200px; 
+                height:275px; 
+                background-color: #09091A;
+            }
+            
+            .fblike {
+                position: absolute;
+                margin: auto;
+                margin-top: 250px;
+            }
+            
+        </style>
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="//use.typekit.net/jem5umq.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    </head>
+    <body>
+        
+       <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        
+       
+        
+        <!--<input id="buttons" type="button" value="Sign In" onclick="submit_form();">-->
+        
+        <div class="fb-like" data-href="http://www.youtube.com" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+        <div id="overlay">
+          
+        </div>
+        
+    </body>
+</html>

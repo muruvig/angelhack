@@ -10,20 +10,29 @@
 
 body {
     text-align: center; 
-    background: url(/style/WallStreetSignGeneric20120305.jpg);
+    background: url(/style/88cxE.jpg);
     background-size: cover;
+    background-color: #505050; 
     color: white;
-    margin: 300px;
+    
 }
+
+#logo {
+    width: 60%;
+    height: 60%;
+}
+
 
 h1 {
     font-family: Matchbook;
-    font-size: 80px;
-    text-shadow: black 0.01em 0.01em 0.01em;
+    font-size: 120px;
+    /*text-shadow: black 0.01em 0.01em 0.01em;*/
+    margin-top: -100px;
 }
 
 form {
     color: white;
+    margin-top: -70px;
 }
 
 input {
