@@ -1,0 +1,52 @@
+@font-face {
+    font-family: Market;
+    src: url(/style/Market_Deco.ttf);
+} 
+
+@font-face {
+    font-family: Matchbook;
+    src: url(/style/Matchbook.ttf);
+} 
+
+body {
+    text-align: center; 
+    background: url(/style/WallStreetSignGeneric20120305.jpg);
+    background-size: cover;
+    color: white;
+    margin: 300px;
+}
+
+h1 {
+    font-family: Matchbook;
+    font-size: 80px;
+    text-shadow: black 0.01em 0.01em 0.01em;
+}
+
+form {
+    color: white;
+}
+
+input {
+    outline: solid;
+    outline-color: white;
+    padding: 10px;
+    font-family: Matchbook;
+    font-size: 50px;
+    text-align: center;
+    background-color: transparent;
+    
+    
+}
+
+::-webkit-input-placeholder {
+   color: white;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+input, select, textarea{
+    color: white;
+}
+

@@ -4,7 +4,11 @@ from sampledata import *
 from string import ascii_letters
 import os
 
+<<<<<<< HEAD
 DATA_PATH = os.getcwd()+ '\\'
+=======
+DATA_PATH = ""
+>>>>>>> origin/master
 
 def load_sentiments(file_name=DATA_PATH + "sentiments.csv"):
     """Read the sentiment file and return a dictionary containing the sentiment
