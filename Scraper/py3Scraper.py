@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-import urllib.request, urllib.error, urllib.parse
+import urllib
 import requests
 import re
 import sys
@@ -55,6 +55,3 @@ def main():
         for article in article_spider(archive):
             art_dic[article[31:]] = article_parser(article)
     return art_dic
-
-if "__name__" = __main__:
-    main()
