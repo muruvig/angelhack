@@ -44,8 +44,8 @@ def article_parser():
 
     art_dic = {}
     
-    for x in range(10):
-        article_html = opener.open(article_links[x]).read()
+    for x in article_links:
+        article_html = opener.open(x).read()
         article_soup = BeautifulSoup(article_html)
         art_dict["art_id"] = article_links[x]
         
