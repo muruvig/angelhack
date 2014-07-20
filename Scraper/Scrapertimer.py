@@ -1,8 +1,9 @@
 from bs4 import BeautifulSoup
-import urllib
+import urllib.request, urllib.error, urllib.parse
 import requests
 import re
 import sys
+import time
 
 def archive_spider():
     opener = urllib.request.build_opener()
@@ -55,3 +56,9 @@ def main():
         for article in article_spider(archive):
             art_dic[article[31:]] = article_parser(article)
     return art_dic
+
+def t():
+    start = time.clock()
+    main()
+    end = time.clock()
+    return (end-start)
