@@ -11,6 +11,7 @@ def load_sentiments(file_name=DATA_PATH + "sentiments.csv"):
     score of each word, a value from -1 to +1.
     """
     sentiments = {}
+    ######################    open(file_name).replace("\n", " ")##################
     for line in open(file_name):#, encoding='utf8'):
         word, score = line.split(',')
         sentiments[word] = float(score.strip())
