@@ -4,7 +4,7 @@ from sentscript import *
 import json
 import os
 
-DATA_PATH = os.getcwd()+ '\searching\\'
+DATA_PATH = os.getcwd() + '/'
 keywordFile = ''
 
 

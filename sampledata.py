@@ -1,0 +1,6 @@
+##datadict = {'id':['title', 'date', 'text']}
+
+
+datadict ={'2014/07/13/us-golf-pga-idUSKBN0FH0Z020140713':['Journeyman Harman leads by one at John Deere Classic', '2014/07/13', "Brian Harman hit almost every fairway and green to shoot six-under-par 65 and lead fellow American Steve Stricker by one stroke after the third round at the John Deere Classic in Silvis, Illinois, on Saturday"],\
+ '2014/04/12/us-australia-cyclone-idUSBREA3A0O420140412': ['Australia avoids worst of Cyclone Ita but more wind, rain due', '2014/04/12', "Australia's northeast escaped the worst of a tropical cyclone that was expected to wreak havoc and bring dangerous storm tides after it weakened and was downgraded on Saturday"],\
+ '2014/02/19/bkc-duke-georgiatech-writethru-idUSMTZEA2J86BZRT20140219': ['Duke defense shuts down Georgia tech', '2014/02/19', "ATLANTA -- Duke Blue Devils freshman forward Jabari Parker posted his ninth double-double of the season, but most of the conversation afterward focused on the team's lockdown defensive performance."]}
